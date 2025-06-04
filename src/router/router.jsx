@@ -3,10 +3,12 @@ import Home from '../pages/movies/Home';
 import MovieDetails from '../pages/movies/MovieDetails';
 import Layout from '../layout/Layout';
 import { getMovie } from '../api/getMovie';
+import { getMovieByName } from '../api/getMovieByName';
 import LoginPage from '../pages/auth/LoginPage';
 import RegisterPage from '../pages/auth/RegisterPage';
 import UserPage from '../pages/auth/UserPage';
 import ProtectedRoute from './ProtectedRoute';
+import SearchPage from '../pages/movies/SearchPage';
 
 export const router = createBrowserRouter([
 	// Rutas públicas
@@ -39,6 +41,11 @@ export const router = createBrowserRouter([
 					{
 						path: 'user',
 						element: <UserPage />,
+					},
+					{
+						path: 'movies',
+						element: <SearchPage />,
+						loader: getMovieByName,
 					}
 				],
 			},

@@ -28,7 +28,7 @@ const MovieDetails = () => {
 				container
 				spacing={4}
 				alignItems="flex-start"
-				wrap="nowrap" // 🔑 Esto evita que se apilen
+				wrap="nowrap"
 			>
 				{/* Imagen */}
 				<Grid
@@ -136,7 +136,5 @@ export default MovieDetails;
 
 
 5. hacer un admin para eliminar y agregar peliculas
-
-7. footer 
 
 */

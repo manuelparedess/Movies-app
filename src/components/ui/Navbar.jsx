@@ -5,10 +5,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 const Navbar = () => {
 
+	const [search, setSearch] = useState('');
 	const { logout } = useContext(AuthContext);
 	const navigate = useNavigate();
 
@@ -26,8 +27,14 @@ const Navbar = () => {
 				</div>
 				<div className='d-flex'>
 					<SearchIcon className='me-2' fontSize="large" sx={{ color: 'white' }} />
-					<input type="email" className="form-control w-50 me-2" placeholder="Search movie ..." />
-					<Button variant="contained">Search</Button>
+					<input 
+						type="email" 
+						className="form-control w-50 me-2" 
+						placeholder="Search movie ..." 
+						value={search}
+						onChange={(e) => {setSearch(e.target.value)}}
+					/>
+					<Button onClick={() => {navigate(`/movies?q=${encodeURIComponent(search)}`)}} variant="contained">Search</Button>
 				</div>
 				<div>
 					<AccountCircleIcon onClick={() => {navigate('/user')}} className='me-2' fontSize="large" sx={{ color: 'white', '&:hover': {cursor: 'pointer'} }} />
