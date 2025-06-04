@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Boldonse&display=swap');
+body {
+    background-color: #06114a;
+}
+
+.ff-anton {
+    font-family: 'Anton', sans-serif;
+}
+
+.bg-oficial {
+    background: linear-gradient(to bottom, #001db5, #0c1959);
+}
+.bg-search {
+    background-color: #06114a;
+}
+
+.all-viewport {
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-page {
+    width: 30%;
+    border-radius: 15px;
+}
