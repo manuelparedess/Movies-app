@@ -8,10 +8,11 @@ export const MovieProvider = ({ children }) => {
     const [movies, setMovies] = useState([]);
     const [pagination, setPagination] = useState({});
     const [loading, setLoading] = useState(false);
+    const [reload, setReload] = useState(false);
 
     useEffect(() => {
         fetchMovies('https://server-movies-app.onrender.com/api/movies');
-    }, [])
+    }, [reload])
 
     const fetchMovies = async (url) => {
         setLoading(true);
@@ -40,7 +41,8 @@ export const MovieProvider = ({ children }) => {
         pagination,
         loading,
         onNext,
-        onPrev
+        onPrev, 
+        setReload
     }
 
     // el contexto

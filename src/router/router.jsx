@@ -8,8 +8,11 @@ import LoginPage from '../pages/auth/LoginPage';
 import RegisterPage from '../pages/auth/RegisterPage';
 import UserPage from '../pages/auth/UserPage';
 import ProtectedRoute from './ProtectedRoute';
+import AdminRoute from './AdminRoute';
 import SearchPage from '../pages/movies/SearchPage';
 import NotFound from '../components/ux/NotFound';
+import MovieAdminPage from '../pages/movies/MovieAdminPage';
+import MovieEdit from '../pages/movies/MovieEdit';
 
 export const router = createBrowserRouter([
 	// Rutas públicas
@@ -60,4 +63,18 @@ export const router = createBrowserRouter([
 			},
 		],
 	},
-]);
+	{
+		element: <AdminRoute />,  //Verifica si es admin
+		children: [
+			{
+				path: '/admin/movies',
+				element: <MovieAdminPage />,
+			},
+			{
+				path: '/admin/edit/:id',
+				element: <MovieEdit />,
+				loader: getMovie,
+			}
+		],
+	}
+])

@@ -37,6 +37,7 @@ const Navbar = () => {
 					<Button onClick={() => {navigate(`/movies?q=${encodeURIComponent(search)}`)}} variant="contained">Search</Button>
 				</div>
 				<div>
+					<Link className="btn btn-primary me-2" to={'/admin/movies'}>Admin Movies</Link>
 					<AccountCircleIcon onClick={() => {navigate('/user')}} className='me-2' fontSize="large" sx={{ color: 'white', '&:hover': {cursor: 'pointer'} }} />
 					<ExitToAppIcon onClick={onLogout} fontSize="large" sx={{ color: 'red', '&:hover': {cursor: 'pointer'}}} />
 				</div>
