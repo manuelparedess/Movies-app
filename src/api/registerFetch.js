@@ -1,5 +1,6 @@
+const API_URL = import.meta.env.API_URL;
 export const registerFetch = async (data) => {
-	const url = 'https://server-movies-app.onrender.com/api/auth/register';
+	const url =	`${API_URL}/auth/register`;
 
 	const params = {
 		method: 'POST',

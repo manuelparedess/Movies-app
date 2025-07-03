@@ -1,5 +1,6 @@
+const API_URL = import.meta.env.API_URL;
 export const loginFetch = async (data) => {
-	const url = 'https://server-movies-app.onrender.com/api/auth/login';
+	const url = `${API_URL}/auth/login`;
 
 	const params = {
 		method: 'POST',

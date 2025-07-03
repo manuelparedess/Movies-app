@@ -1,5 +1,6 @@
+const API_URL = import.meta.env.API_URL;
 export const updateMovie = async (data, id) => {
-	const url = 'https://server-movies-app.onrender.com/api/movie/' + id;
+	const url = `${API_URL}/movie/` + id;
 
     const formData = new FormData();
 

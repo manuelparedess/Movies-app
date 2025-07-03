@@ -1,5 +1,6 @@
+const API_URL = import.meta.env.API_URL;
 export const getMeFetch = async (token) => {
-	const url = 'https://server-movies-app.onrender.com/api/user/me';
+	const url = `${API_URL}/user/me`;
 
 	const params = {
 		method: 'GET',

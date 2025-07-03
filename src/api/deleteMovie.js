@@ -1,8 +1,9 @@
+const API_URL = import.meta.env.API_URL;
 export const deleteMovie = async (id) => {
 
     const token = localStorage.getItem('token');
 
-    const response = await fetch('https://server-movies-app.onrender.com/api/movie/' + id, {
+    const response = await fetch(`${API_URL}/movie/` + id, {
         method: 'DELETE',
         headers: {
             'Authorization': token,

@@ -1,5 +1,6 @@
 import { useState, createContext, useEffect } from 'react';
 import { getMovies } from '../api/getMovies.js';
+const API_URL = import.meta.env.API_URL;
 
 export const MovieContext = createContext();
 
@@ -11,7 +12,7 @@ export const MovieProvider = ({ children }) => {
     const [reload, setReload] = useState(false);
 
     useEffect(() => {
-        fetchMovies('https://server-movies-app.onrender.com/api/movies');
+        fetchMovies(`${API_URL}/movies`);
     }, [reload])
 
     const fetchMovies = async (url) => {
