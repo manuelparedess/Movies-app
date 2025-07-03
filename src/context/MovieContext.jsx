@@ -1,6 +1,6 @@
 import { useState, createContext, useEffect } from 'react';
 import { getMovies } from '../api/getMovies.js';
-const API_URL = import.meta.env.API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const MovieContext = createContext();
 
