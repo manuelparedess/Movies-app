@@ -7,22 +7,22 @@ const Footer = () => {
         <Box
             component="footer"
             sx={{
-                py: 3,
+                pt: 3,
+                pb: 5,
                 px: 2,
-                mt: 5,
-                backgroundColor: (theme) =>
-                    theme.palette.mode === 'light' ? '#f5f5f5' : '#333',
+                mt: {xs: 5, lg: 8},
+                backgroundColor: '#fff',
                 textAlign: 'center',
             }}
         >
             <Stack
                 direction="row"
-                spacing={2}
+                spacing={{xs: 1, sm: 5}}
                 justifyContent="center"
                 alignItems="center"
                 flexWrap="wrap"
             >
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{display: {xs: 'none', sm: 'block'}}}>
                     Created by Manuel Paredes
                 </Typography>
                 <Link
@@ -53,6 +53,9 @@ const Footer = () => {
                     Server Repository
                 </Link>
             </Stack>
+            <Typography variant="body2" color="text.secondary" sx={{display: {xs: 'block', sm: 'none'}, pt: 2}}>
+                Created by Manuel Paredes
+            </Typography>
         </Box>
     )
 }

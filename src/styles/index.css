@@ -12,6 +12,10 @@ body {
     background: linear-gradient(to bottom, #001db5, #0c1959);
 }
 
+.color-oficial {
+    color: #001db5;
+}
+
 .bg-search {
     background-color: #06114a;
 }
@@ -42,10 +46,17 @@ body {
     .form-page {
         width: 60%;
     }
+    .form-movie {
+        width: 80%;
+    }
 }
 
 @media (max-width: 576px) {
     .form-page {
         width: 95%;
+    }
+    .form-movie {
+        width: 100%;
+        border-radius: 15px;
     }
 }

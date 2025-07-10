@@ -48,22 +48,22 @@ const MovieAdminPage = () => {
     };
 
     return (
-        <Box sx={{ backgroundColor: '#06114a', minHeight: '100vh', p: 4, color: 'white' }}>
-            <div className='d-flex mb-2'>
-                <Typography variant="h4" gutterBottom>
+        <Box sx={{ backgroundColor: '#06114a', minHeight: '100vh', p: { xs: 2, md: 4}, color: 'white' }}>
+            <div className='d-flex align-items-center mb-2'>
+                <Typography sx={{fontSize: {xs: '1rem', sm:'1.5rem'}}}>
                     Admin Panel -
                 </Typography>
-                <Link className="navbar-brand text-light ff-anton fs-3 mx-2" to={'/home'}>MOVIES APP</Link>
+                <Link className="navbar-brand text-light ff-anton fs-3 me-2" to={'/home'}>MOVIES APP</Link>
                 <LiveTvIcon fontSize="large" sx={{ color: 'white' }} />
             </div>
 
             <FormMovies formData={formData} handleSubmit={handleSubmit} setFormData={setFormData} error={error} success={success} />
 
-            <Typography variant="h5" gutterBottom>
+            <Typography sx={{fontSize: {xs: '1.25rem', sm:'1.65rem'}}}>
                 Películas existentes
             </Typography>
 
-            <Grid container spacing={3}>
+            <Grid container spacing={1}>
                 {success == 'Deleted Movie' && <p className="alert alert-danger mt-2">{success}</p>}
                 <Pagination />
                 <div className="row">

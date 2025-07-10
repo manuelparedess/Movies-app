@@ -10,10 +10,10 @@ import {
 
 const MovieCard = ({ movie }) => {
 	return (
-		<Link className="text-decoration-none" to={`/movie/${movie._id}`}>
+		<Link className="text-decoration-none w-100" to={`/movie/${movie._id}`}>
 			<Card
 				sx={{
-					maxWidth: 450,
+					maxWidth: 400,
 					bgcolor: '#1c1c1c',
 					color: 'white',
 					borderRadius: 3,

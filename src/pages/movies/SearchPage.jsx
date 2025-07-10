@@ -15,7 +15,7 @@ const SearchPage = () => {
 
     return (
         <div className="container">
-            <h2 className='display-6 fw-bold text-light my-5 '>Results to : <span className='text-primary'>{q}</span></h2>
+            <h2 className='display-6 fw-bold text-light my-3 my-md-5 '>Results to : <span className='text-primary'>{q}</span></h2>
             {
                 <div className="row justify-content-center g-4">
                     {

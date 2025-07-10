@@ -9,7 +9,7 @@ const UserPage = () => {
     const initials = `${firstname[0]}${lastname[0]}`.toUpperCase();
 
     return (
-        <Container maxWidth="sm" sx={{ mt: 8 }}>
+        <Container maxWidth="sm" sx={{ mt: {xs: 4, sm: 8} }}>
             <Card
                 sx={{
                     borderRadius: 4,

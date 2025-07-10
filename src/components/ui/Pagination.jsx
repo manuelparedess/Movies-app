@@ -20,7 +20,8 @@ const Pagination = () => {
 					onClick={onPrev}
 					color="error"
 				>
-					<ArrowBackIcon fontSize="large" />
+					<ArrowBackIcon fontSize="large" sx={{display: {xs: 'none', sm: 'inherit'}}} />
+					<ArrowBackIcon fontSize="medium" sx={{display: {xs: 'inherit', sm: 'none'}}} />
 				</IconButton>
 			)}
 
@@ -31,7 +32,8 @@ const Pagination = () => {
 					onClick={onNext}
 					color="success"
 				>
-					<ArrowForwardIcon fontSize="large" />
+					<ArrowForwardIcon fontSize="large" sx={{display: {xs: 'none', sm: 'inherit'}}}  />
+					<ArrowForwardIcon fontSize="medium" sx={{display: {xs: 'inherit', sm: 'none'}}}  />
 				</IconButton>
 			)}
 		</Box>

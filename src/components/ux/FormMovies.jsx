@@ -28,10 +28,10 @@ const FormMovies = ({ formData, handleSubmit, setFormData, error, success }) => 
             <div className="mb-3">
                 <input name="title" className="form-control" placeholder="Títle" value={formData.title} onChange={handleChange} required />
             </div>
-            <div className="mb-3 d-flex justify-content-between align-items-center">
+            <div className="mb-3 d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
                 <label className="form-label">Release year:</label>
                 <input name="releaseYear" type="number" className="form-control w-25" placeholder="releaseYear" value={formData.releaseYear} onChange={handleChange} />
-                <input name="genre" className="form-control w-50" placeholder="Genre" value={formData.genre} onChange={handleChange} />
+                <input name="genre" className="form-control w-50 mt-2 mt-sm-0" placeholder="Genre" value={formData.genre} onChange={handleChange} />
             </div>
             <div className="mb-3">
                 <input name="director" className="form-control" placeholder="Director" value={formData.director} onChange={handleChange} />
@@ -48,7 +48,7 @@ const FormMovies = ({ formData, handleSubmit, setFormData, error, success }) => 
             <div className="mb-3">
                 <textarea name="description" className="form-control" placeholder="Description" value={formData.description} onChange={handleChange}></textarea>
             </div>
-            <div className="mb-3 d-flex justify-content-between align-items-center">
+            <div className="mb-3 d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
                 <label className="form-label">Rating:</label>
                 <input name="rating" type="number" step="0.1" max="10" min="0" className="form-control w-25" placeholder="Rating" value={formData.rating} onChange={handleChange} />
                 <label className="form-label">Image:</label>

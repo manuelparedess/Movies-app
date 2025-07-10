@@ -23,22 +23,19 @@ const MovieDetails = () => {
 	}
 
 	return (
-		<Box sx={{ px: { xs: 2, md: 6 }, py: 5, overflowX: 'auto' }}>
+		<Box sx={{ px: { xs: 2, md: 4 }, py: 5, overflowX: 'auto' }}>
 			<Grid
 				container
 				spacing={4}
 				alignItems="flex-start"
-				wrap="nowrap"
 			>
 				{/* Imagen */}
 				<Grid
 					item
-					xs={6}
-					md={4}
+					size={{xs: 12, md: 4}}
 					className="animate__animated animate__backInLeft"
-					sx={{ minWidth: '300px' }}
 				>
-					<Card sx={{ borderRadius: 3, overflow: 'hidden', width: '100%' }}>
+					<Card sx={{ borderRadius: 3, overflow: 'hidden', width: { xs: '90%', sm: '50%', md: '100%'}, mx: 'auto'}}>
 						<CardMedia
 							component="img"
 							height="500"
@@ -51,10 +48,8 @@ const MovieDetails = () => {
 				{/* Información */}
 				<Grid
 					item
-					xs={6}
-					md={8}
+					size={{xs: 12, md: 8}}
 					className="animate__animated animate__backInRight"
-					sx={{ minWidth: '400px' }}
 				>
 					<Card
 						sx={{
